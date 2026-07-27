@@ -73,7 +73,7 @@ export default function BlogPostContent({ slug }: BlogPostContentProps) {
         const altText = target.fields?.description || target.fields?.title || post.title;
 
         return (
-          <figure className="my-8 border border-current bg-white">
+          <figure className="my-8">
             <img src={url} alt={altText} className="h-auto w-full object-cover" />
           </figure>
         );

@@ -172,6 +172,15 @@
   text-align-last: left;
 }
 
+.contentful-post-body figure,
+.contentful-post-body iframe,
+.contentful-post-body embed,
+.contentful-post-body object {
+  border: none !important;
+  background: transparent !important;
+  box-shadow: none !important;
+}
+
 .contentful-post-body b {
   -webkit-text-stroke: 0.025em currentColor;
 }
