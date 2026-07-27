@@ -36,6 +36,7 @@ export default function BlogPostContent({ slug }: BlogPostContentProps) {
     return <div>loading...</div>
   }
   const backgroundClass = post.backgroundcolor ?? bg;
+  const wrapperBackgroundClass = post.backgroundcolor ?? bg;
 
   const handleBack = () => {
     if (typeof window !== "undefined" && window.history.length > 1) {
@@ -73,7 +74,7 @@ export default function BlogPostContent({ slug }: BlogPostContentProps) {
         const altText = target.fields?.description || target.fields?.title || post.title;
 
         return (
-          <figure className="my-8">
+          <figure className="my-8 border border-current bg-white">
             <img src={url} alt={altText} className="h-auto w-full object-cover" />
           </figure>
         );
@@ -84,7 +85,7 @@ export default function BlogPostContent({ slug }: BlogPostContentProps) {
   const customColorStyle = { "--custom-color": post.customcolor ?? "#5B0F00" } as CSSProperties;
 
   return (
-    <div className={`min-h-screen overflow-hidden ${bg} ${text}`} style={customColorStyle}>
+    <div className={`min-h-screen overflow-hidden ${wrapperBackgroundClass} ${text}`} style={customColorStyle}>
       <div className="relative left-4 top-4 z-50">
         <button
           type="button"

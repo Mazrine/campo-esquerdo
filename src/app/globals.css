@@ -157,8 +157,11 @@
   color: #000000;
   background-color:var(--custom-color);
   text-align: center;
-  padding: 10px;
-  margin: 0;
+  margin: 2;
+  width: fit-content;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 4px 8px;
 }
 
 .contentful-post-body blockquote {
@@ -170,6 +173,11 @@
 .contentful-post-body ul {
   text-align: justify;
   text-align-last: left;
+}
+
+.contentful-post-body ol {
+  text-align: center;
+  color: var(--custom-color);
 }
 
 .contentful-post-body figure,

@@ -115,9 +115,10 @@ const wrapLabel = (
   text: string,
   maxWidth: number,
   approxCharWidth = 7.5,
-  maxLines = 2
+  maxLines = 3,
+  charPenalty = 0
 ) => {
-  const maxChars = Math.max(Math.floor(maxWidth / approxCharWidth), 6);
+  const maxChars = Math.max(Math.floor(maxWidth / approxCharWidth - charPenalty), 6);
   if (text.length <= maxChars) {
     return [text];
   }
@@ -522,10 +523,16 @@ export default function BlogGraph({ posts }: BlogGraphProps) {
               post.title,
               maxTextWidth,
               approxCharWidth,
-              isMobile ? 3 : 2
+              isMobile ? 5 : 2,
+              isMobile ? 0 : 15
             );
             const authorLine = post.author?.trim() || post.sourceLabel?.trim() || "Campo Esquerdo";
-            const authorDy = titleLines.length === 1 ? "1.4em" : "1.6em";
+            const titleLineHeight = Math.max(titleFontSize * 1.14, 12);
+            const authorLineHeight = Math.max(authorFontSize * 1.2, 12);
+            const totalTextHeight =
+              titleLines.length * titleLineHeight + authorLineHeight + (titleLines.length > 1 ? 2 : 0);
+            const textBlockTopY = center.y - totalTextHeight / 2;
+            const authorY = textBlockTopY + titleLines.length * titleLineHeight + 2;
 
             return (
               <g
@@ -553,24 +560,29 @@ export default function BlogGraph({ posts }: BlogGraphProps) {
                 />
                 <text
                   x={center.x}
-                  y={center.y}
+                  y={textBlockTopY}
                   textAnchor="middle"
-                  dominantBaseline="middle"
+                  dominantBaseline="hanging"
                   fill={isActive ? "#ffffff" : "#000000"}
                   style={{ fontFamily: "ui-monospace, monospace", pointerEvents: "none" }}
                 >
                   {titleLines.map((line, index) => (
                     <tspan
-                      key={line}
+                      key={`${slug}-${line}-${index}`}
                       x={center.x}
-                      dy={index === 0 ? (titleLines.length === 1 ? "0em" : "-0.6em") : "1.2em"}
+                      y={textBlockTopY + index * titleLineHeight}
                       fontSize={titleFontSize}
                       fontWeight="700"
                     >
                       {line}
                     </tspan>
                   ))}
-                  <tspan x={center.x} dy={authorDy} fontSize={authorFontSize} fontWeight="400">
+                  <tspan
+                    x={center.x}
+                    y={authorY}
+                    fontSize={authorFontSize}
+                    fontWeight="400"
+                  >
                     {authorLine}
                   </tspan>
                 </text>
