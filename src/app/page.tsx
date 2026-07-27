@@ -177,7 +177,7 @@ export default function Home() {
             <div>
               <div className={`mobile-text-container mobile-text-padding bg-white ${text}`}>
                 <span className="mb-2">
-                  Campo Esquerdo é uma plataforma cultural que fomenta novas estéticas, modos de produção e experiências nos campos da arte sonora, musical e do corpo. Ao desenhar estruturas que permitam co-criação a partir de perspectivas humanas, técnicas e de outros seres vivos, sem hierarquias, Campo Esquerdo promove "tecnologias", no plural. Dicotomias como arte/tecnologia, show/festa, dança/inércia, coletividade/individualidade não têm lugar aqui, exceto se desmontadas e recombinadas em configurações irreconhecíveis. 
+                  Campo Esquerdo é uma plataforma cultural que fomenta novas estéticas, modos de produção e experiências nos campos da arte sonora, musical e do corpo. Ao desenhar infra_estruturas que permitam co-criação a partir de perspectivas humanas, técnicas e de outros seres vivos, sem hierarquias, Campo Esquerdo promove "tecnologias", no plural. Dicotomias como arte/tecnologia, show/festa, dança/inércia, coletividade/individualidade não têm lugar aqui, exceto se desmontadas e recombinadas em configurações irreconhecíveis. 
                 </span>
                 <br />
                 <div className="h-4" />
@@ -218,10 +218,10 @@ export default function Home() {
 
 
                   <div className={`mobile-text-container mobile-text-padding overflow-y-auto bg-white ${text}`}>
-                    <span className="mb-2">Campo Esquerdo busca abrir espaços e criar estruturas porque acreditamos que para que floresçam novas linguagens artísticas e experiências, é necessário proporcionar condições materiais que permitam que isso aconteça. Mesmo que haja circunstâncias que estejam muito além do alcance de um projeto de nicho, pensamos que o formato mínimo viável para a sua continuidade, com um impacto alinhado a seus valores, contém: eventos públicos gratuitos recorrentes (cultura como direito), autonomia técnica e de equipamentos (sistema de som próprio), e uma comunidade engajada e dignamente compensada. Por isso, em vez de seguir realizando eventos com cobrança de ingressos (o que delegaria a responsabilidade do financiamento ao público), seguimos uma via mais paciente.    </span>
+                    <span className="mb-2">Campo Esquerdo busca abrir espaços e criar infra_estruturas porque acreditamos que para que floresçam novas linguagens artísticas e experiências, é necessário proporcionar condições materiais que permitam que isso aconteça. Mesmo que haja circunstâncias que estejam muito além do alcance de um projeto de nicho, pensamos que o formato mínimo viável para a sua continuidade, com um impacto alinhado a seus valores, contém: eventos públicos gratuitos recorrentes (cultura como direito), autonomia técnica e de equipamentos (sistema de som próprio), e uma comunidade engajada e dignamente compensada. Por isso, em vez de seguir realizando eventos com cobrança de ingressos (o que delegaria a responsabilidade do financiamento ao público), seguimos uma via mais paciente.    </span>
                     <br /><div className="h-4" />
                     <span className="pl-2">
-                      Por meio de fundos da Lei Aldir Blanc, e em parceria com o MAM-Rio, A Fase II, busca criar a estrutura necessária para dar continuidade ao campo esquerdo por meio de quatro passos:  </span> <br />  <br />
+                      Por meio de fundos da Lei Aldir Blanc, e em parceria com o MAM-Rio, A Fase II, busca criar a infra_estrutura necessária para dar continuidade ao campo esquerdo por meio de quatro passos:  </span> <br />  <br />
                     <span className="pl-2"> 1-Residência artística semipresencial com chamada aberta para artistas sonoras e do corpo, com acompanhamento das artistas que fizeram parte das interações passadas do projeto.  <br />  <br />
                       <span className="pl-2"> 2-Ciclo de Seminários e Oficinas abertos ao público no Museu de Arte Moderna do Rio de Janeiro com artistas e pesquisadores, convidados. </span>  <br /> <br />
                       <span className="pl-2"> 3-Construção de um sistema de som que será usado nas próximas manifestações do projeto </span>  <br /> <br />
@@ -361,7 +361,7 @@ export default function Home() {
               <div className={`sobre-text-container min-h-[80vh] max-h-[80vh] ${text}`}>
 
 
-                <span className="mb-2 pl-2"> Campo Esquerdo é uma plataforma cultural que fomenta novas estéticas, modos de produção e experiências nos campos da arte sonora, musical e do corpo. Ao desenhar estruturas que permitam co-criação a partir de perspectivas humanas, técnicas e de outros seres vivos, sem hierarquias, Campo Esquerdo promove "tecnologias", no plural. Dicotomias como arte/tecnologia, show/festa, dança/inércia, coletividade/individualidade não têm lugar aqui, exceto se desmontadas e recombinadas em configurações irreconhecíveis.  </span>
+                <span className="mb-2 pl-2"> Campo Esquerdo é uma plataforma cultural que fomenta novas estéticas, modos de produção e experiências nos campos da arte sonora, musical e do corpo. Ao desenhar infra_estruturas que permitam co-criação a partir de perspectivas humanas, técnicas e de outros seres vivos, sem hierarquias, Campo Esquerdo promove "tecnologias", no plural. Dicotomias como arte/tecnologia, show/festa, dança/inércia, coletividade/individualidade não têm lugar aqui, exceto se desmontadas e recombinadas em configurações irreconhecíveis.  </span>
                 <br /><div className="h-4" />
 
 
@@ -389,10 +389,10 @@ export default function Home() {
                   <div className="flex flex-col">
 
                       <div className={`sobre-text-container ${text}`}>
-                        <span className="mb-2 pl-2"> Campo Esquerdo busca abrir espaços e criar estruturas porque acreditamos que para que floresçam novas linguagens artísticas e experiências, é necessário proporcionar condições materiais que permitam que isso aconteça. Mesmo que haja circunstâncias que estejam muito além do alcance de um projeto de nicho, pensamos que o formato mínimo viável para a sua continuidade, com um impacto alinhado a seus valores, contém: eventos públicos gratuitos recorrentes (cultura como direito), autonomia técnica e de equipamentos (sistema de som próprio), e uma comunidade engajada e dignamente compensada. Por isso, em vez de seguir realizando eventos com cobrança de ingressos (o que delegaria a responsabilidade do financiamento ao público), seguimos uma via mais paciente.    </span>
+                        <span className="mb-2 pl-2"> Campo Esquerdo busca abrir espaços e criar infra_estruturas porque acreditamos que para que floresçam novas linguagens artísticas e experiências, é necessário proporcionar condições materiais que permitam que isso aconteça. Mesmo que haja circunstâncias que estejam muito além do alcance de um projeto de nicho, pensamos que o formato mínimo viável para a sua continuidade, com um impacto alinhado a seus valores, contém: eventos públicos gratuitos recorrentes (cultura como direito), autonomia técnica e de equipamentos (sistema de som próprio), e uma comunidade engajada e dignamente compensada. Por isso, em vez de seguir realizando eventos com cobrança de ingressos (o que delegaria a responsabilidade do financiamento ao público), seguimos uma via mais paciente.    </span>
                         <br /><div className="h-4" />
                         <span className="pl-2">
-                          Por meio de fundos da Lei Aldir Blanc, e em parceria com o MAM-Rio, A Fase II, busca criar a estrutura necessária para dar continuidade ao campo esquerdo por meio de quatro passos:  </span> <br />  <br />
+                          Por meio de fundos da Lei Aldir Blanc, e em parceria com o MAM-Rio, A Fase II, busca criar a infra_estrutura necessária para dar continuidade ao campo esquerdo por meio de quatro passos:  </span> <br />  <br />
                         <span className="pl-2"> 1 - Residência artística semipresencial com chamada aberta para artistas sonoras e do corpo, com acompanhamento das artistas que fizeram parte das interações passadas do projeto.  <br />  <br />
                           <span className="pl-2"> 2 - Ciclo de Seminários e Oficinas abertos ao público no Museu de Arte Moderna do Rio de Janeiro com artistas e pesquisadores, convidados. </span>  <br /> <br />
                           <span className="pl-2"> 3 - Construção de um sistema de som que será usado nas próximas manifestações do projeto </span>  <br /> <br />
