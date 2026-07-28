@@ -22,6 +22,7 @@ interface BlogPostContentProps {
 
 export default function BlogPostContent({ slug }: BlogPostContentProps) {
   const [{ post, posts }, setData] = useState<{ post: BlogPost | null; posts: BlogPost[] | null }>({ post: null, posts: null });
+  const [showScrollCue, setShowScrollCue] = useState(true);
   const { text, border, bg } = useThemeClasses();
   const router = useRouter();
   
@@ -31,6 +32,17 @@ export default function BlogPostContent({ slug }: BlogPostContentProps) {
       setData({ post, posts });
     })();
   }, [slug]);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setShowScrollCue(window.scrollY < 80);
+    };
+
+    handleScroll();
+    window.addEventListener("scroll", handleScroll, { passive: true });
+
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   if (!post || !posts) {
     return <div>loading...</div>
@@ -96,10 +108,20 @@ export default function BlogPostContent({ slug }: BlogPostContentProps) {
 
         </button>
       </div>
-       <div className="fixed bottom-4 left-1/2 -translate-x-1/2 z-50 md:left-4 md:translate-x-0"> 
-          <img src="/logo.png" alt="icon" className="h-[2.5em]" />
-        </div>
+      <div className="fixed bottom-4 left-1/2 z-50 -translate-x-1/2 md:left-4 md:translate-x-0">
+        <img src="/logo.png" alt="icon" className="h-[2.5em]" />
+      </div>
 
+      <div
+        className={`fixed bottom-4 right-20 z-50 -translate-x-1/2 transition-opacity duration-300 ${showScrollCue ? "opacity-0 md:opacity-100" : "pointer-events-none opacity-0"}`}
+        aria-hidden="true"
+      >
+        <span className="block text-4xl font-semibold" style={{ transform: "rotate(180deg)" }}>
+          ^
+        </span>
+      </div>
+
+      <div className="fixed bottom-4 right-4 z-50" />
 
       <div className={`px-4 ${backgroundClass} py-8 sm:px-8`}>
         <article className="mx-auto max-w-3xl space-y-6 ">

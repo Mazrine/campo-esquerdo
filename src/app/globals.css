@@ -186,6 +186,13 @@ html {
   color: var(--custom-color);
 }
 
+.contentful-post-body hr {
+  text-align: center;
+  opacity: 0%;
+  margin-bottom:15%;
+}
+
+
 .contentful-post-body figure,
 .contentful-post-body iframe,
 .contentful-post-body embed,
