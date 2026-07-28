@@ -28,8 +28,13 @@
   --background: #ffffff;
   --foreground: #171717;
   --font-custom: 'msgothic', 'MS UI Gothic', sans-serif;
+  
 }
 
+html {
+  scrollbar-width: none;
+  scrollbar-color: #ffffff #fff;
+}
 
 
 @media (prefers-color-scheme: default) {
@@ -50,12 +55,13 @@
 }
 
 
-
+/*
 .scrollbar-minimal {
   scrollbar-width: none;
   scrollbar-color: #000 transparent;
 }
 
+*/
 
 @media (min-width: 1600px) {
   .laptop1600 {
