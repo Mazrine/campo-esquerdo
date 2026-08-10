@@ -134,9 +134,9 @@ export default function BlogPostContent({ slug }: BlogPostContentProps) {
               {post.author}
             </p>
             <p className="text-base sm:text-lg leading-relaxed opacity-80">
-              {post.subtitle}
+              {post.subtitle} hellow
             </p>
-          </div> */}
+          </div> */} 
 
           {post.image && (
             <div className={`border ${border} bg-white`}>
