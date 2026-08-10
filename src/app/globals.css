@@ -173,7 +173,7 @@ html {
 .contentful-post-body blockquote {
   text-align: justify;
   text-align-last: right;
-  padding-left: 10rem;
+  padding-left: 10vw;
 }
 
 .contentful-post-body ul {

@@ -133,13 +133,9 @@ const wrapLabel = (
       if (current) {
         lines.push(current);
         current = word;
-        candidate = word;
+      } else {
+        current = word;
       }
-      while (candidate.length > maxChars) {
-        lines.push(candidate.slice(0, maxChars));
-        candidate = candidate.slice(maxChars);
-      }
-      current = candidate;
     } else {
       current = candidate;
     }
