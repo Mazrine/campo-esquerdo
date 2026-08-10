@@ -508,23 +508,33 @@ export default function BlogGraph({ posts }: BlogGraphProps) {
               1.05
             );
             const mobileFontFactor = isMobile ? 0.38 * postCount : 1;
+            const desktopDensityFactor = isMobile
+              ? 1
+              : clamp(1.05 - postCount * 0.018, 0.68, 1.05);
             const authorScale = isMobile ? 0.8 : 1;
-            const maxTextWidth = Math.max(Math.min(bounds.width - 18, graphSize.width * 0.55), 40);
+            const maxTextWidth = Math.max(
+              Math.min(bounds.width * 0.72, graphSize.width * 0.4),
+              40
+            );
             const widthThreshold = graphSize.width / 4;
-            const widthScale = clamp(maxTextWidth / widthThreshold, 0.65, 2);
+            const widthScale = clamp(maxTextWidth / widthThreshold, 0.65, 1.15);
             const titleFontSize = Math.round(
-              clamp(20 * screenScale * widthScale * mobileFontFactor, 8, 18)
+              clamp(
+                16 * screenScale * widthScale * mobileFontFactor * desktopDensityFactor,
+                9,
+                14
+              )
             );
             const authorFontSize = Math.round(
               clamp(11 * screenScale * widthScale * authorScale, 9, 15)
             );
-            const approxCharWidth = (isMobile ? 12.2 : 7.5) * (titleFontSize / 16);
+            const approxCharWidth = (isMobile ? 12.2 : 8.5) * (titleFontSize / 16);
             const titleLines = wrapLabel(
               post.title,
               maxTextWidth,
               approxCharWidth,
-              isMobile ? 5 : 2,
-              isMobile ? 0 : 15
+              isMobile ? 5 : 3,
+              isMobile ? 0 : 22
             );
             const authorLine = post.author?.trim() || post.sourceLabel?.trim() || "Campo Esquerdo";
             const titleLineHeight = Math.max(titleFontSize * 1.14, 12);
