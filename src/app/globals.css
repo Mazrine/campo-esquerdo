@@ -176,6 +176,11 @@ html {
   padding-left: 10vw;
 }
 
+.contentful-post-body sup {
+  font-size: 0.6em;
+  vertical-align: super;
+}
+
 .contentful-post-body ul {
   text-align: justify;
   text-align-last: left;
